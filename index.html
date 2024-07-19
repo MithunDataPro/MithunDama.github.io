@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mithun Dama - Portfolio</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+  /* Add your CSS here */
+  .about-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .about-section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .about-section p {
+    color: #333;
+  }
+
+  /* Projects Section */
+  .projects-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  .card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .card-img-top {
+    max-height: 180px;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 15px;
+  }
+  .card-title {
+    font-size: 1.25rem;
+  }
+  .card-text {
+    margin-bottom: 15px;
+  }
+
+  /* Skills Section */
+  .skills-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  .skills-section .card {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .skills-section .card-img-top {
+    padding: 20px;
+    background-color: #f8f9fa;
+    height: 180px;
+    object-fit: contain;
+  }
+  .skills-section .card-body {
+    padding: 15px;
+  }
+  .skills-section .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  .skills-section .btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+  }
+  .skills-section .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding: 50px 0;
+  }
+  .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .social-icon {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  .social-icon:hover {
+    opacity: 0.7;
+  }
+  .contact-section a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .contact-section a:hover {
+    color: #ddd;
+  }
+
+  /* Sticky Navbar */
+  .navbar {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  body {
+    padding-top: 56px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .navbar-nav .nav-link {
+    color: white;
+  }
+  .navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+  }
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      background-color: #343a40;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2>About</h2>
+    <img src="assets/IMG_9156.jpg" alt="Mithun Dama">
+    <p>I am a data professional with experience as an Educational Analyst at Toppr and a Data Engineer at Yocket. I founded my startup, Damasmart, during my undergraduate studies, driving innovative tech solutions. Having completed my master's in data science at Pace University, where I interned as a Big Data Engineer, I am now seeking roles in Big Data, Data Engineering, and Data Analysis. My journey combines technical expertise with business acumen, equipping me to implement advanced analytical strategies for efficient data management and reporting.</p>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+  <div class="container">
+    <h2 class="text-center">Projects</h2>
+    <div class="row">
+      <!-- Project 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="assets/projects/project1.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Blog Post</a>
+            <a href="#" class="btn btn-secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="assets/projects/project2.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project 2</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Blog Post</a>
+            <a href="#" class="btn btn-secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="assets/projects/project3.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Project 3</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Blog Post</a>
+            <a href="#" class="btn btn-secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section bg-white">
+  <div class="container">
+    <h2 class="text-center">Skills</h2>
+    <div class="row">
+      <!-- Skill 1 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="assets/skills/skill1.png" class="card-img-top" alt="Python">
+          <div class="card-body">
+            <h5 class="card-title">Python</
