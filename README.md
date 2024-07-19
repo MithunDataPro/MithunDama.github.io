@@ -1,5 +1,3 @@
-# MithunDama.github.io
-
 # Data Engineer
 
 ### Education
