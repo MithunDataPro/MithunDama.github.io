@@ -1,14 +1,12 @@
+title: Mithun Dama
+logo: /assets/IMG_9156.jpg
+#description: text below image
+show_downloads: true
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
 
-gem "github-pages", group: :jekyll_plugins
-
-title: Mithun Dama
-description: I am a data professional with experience as an Educational Analyst at Toppr and a Data Engineer at Yocket. I founded my startup, Damasmart, during my undergraduate studies, driving innovative tech solutions. Having completed my master's in data science at Pace University, where I interned as a Big Data Engineer, I am now seeking roles in Big Data, Data Engineering, and Data Analysis. My journey combines technical expertise with business acumen, equipping me to implement advanced analytical strategies for efficient data management and reporting.
-
-# Add the path to your image
-image: assets/IMG_9156.jpg
+  gem "github-pages", group: :jekyll_plugins
 
 # Additional personal details
 email: mithundama.de@gmail.com
