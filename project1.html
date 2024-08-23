@@ -80,7 +80,7 @@
 <body>
   <div class="container">
     <h2>Real-Time Streaming with Azure Databricks and Event Hubs</h2>
-    <img src="assets/streaming_project1.png" alt="Project Architecture" style="width: 100%; height: auto; margin-bottom: 20px;">
+    <img src="assets/streaming_project1.png" alt="Project Architecture" style="width: 100%; height: auto; margin-bottom: 40px;">
 
     <h3>Project Overview</h3>
     <p>This project demonstrates an end-to-end real-time data streaming solution using Azure Event Hubs, Databricks (with Spark Structured Streaming), Delta Lake, and Power BI for visualization. The project follows the Medallion architecture to process data through Bronze, Silver, and Gold layers.</p>
@@ -94,20 +94,21 @@
 
     <h4>Medallion Architecture</h4>
     <ul>
-        <h3>Azure Event Hubs</h3>
-<img src="https://github.com/YourRepo/YourProject/blob/main/azure_event_data_flow.png" alt="Azure Event Data Flow" style="width:100%; max-width:600px;">
+        <h2>Azure Event Hubs</h2>
+<img src="assets/medallion_architecture.jpg" alt="Medallion Architecture Overview" style="width:100%; max-width:600px;">
 
       <li><strong>Bronze Layer:</strong> Stores raw, unprocessed data. Minimal transformations are applied to preserve the original data.</li>
       <li><strong>Silver Layer:</strong> Data is cleaned, filtered, and enriched. The data is in a more consumable format, ready for business use.</li>
       <li><strong>Gold Layer:</strong> Aggregated and refined data is stored. This layer is used for reporting and business intelligence in Power BI.</li>
     </ul>
 
-    <h4>Azure Event Hubs</h4>
+    <h3>Azure Event Hubs</h3>
+    <img src="assets/event_hub.jfif" alt="Azure Event Hub" style="width:100%; max-width:120px;">
     <h5>Overview</h5>
     <p>Azure Event Hubs is a big data streaming platform and event ingestion service capable of receiving and processing millions of events per second. Event Hubs can process and store events, data, or telemetry produced by distributed software and devices. It can capture streaming data into an Azure Blob storage or Azure Data Lake for long-term retention or micro-batch processing.</p>
 
-    <h3>Azure Event Hubs</h3>
-<img src="https://github.com/YourRepo/YourProject/blob/main/azure_event_data_flow.png" alt="Azure Event Data Flow" style="width:100%; max-width:600px;">
+    <h4>Azure Event Hubs</h4>
+<img src="assets/Event_hubs_data_flow.png" alt="How Azure Event Data Flow Works" style="width:100%; max-width:600px;">
 
     <h5>Features</h5>
     <ul>
