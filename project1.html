@@ -5,20 +5,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Real-Time Streaming Project Overview</title>
   <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #d4d4d4;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #4ecdc4;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h3, h4, h5 {
+      color: #4ecdc4;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #4ecdc4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    table, th, td {
+      border: 1px solid #4ecdc4;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4ecdc4;
+      color: #1e1e1e;
+    }
+
+    pre {
+      background-color: #2d2d2d;
+      padding: 15px;
+      border-radius: 5px;
+      color: #d4d4d4;
+      overflow-x: auto;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h2>Real-Time Streaming with Azure Databricks and Event Hubs</h2>
-    <img src="assets/streaming_project1.png" alt="Project Architecture" style="width: 100%; max-width: 800px; height: auto; margin-bottom: 20px;">
+    <img src="assets/streaming_project1.png" alt="Project Architecture" style="width: 100%; height: auto; margin-bottom: 20px;">
 
     <h3>Project Overview</h3>
     <p>This project demonstrates an end-to-end real-time data streaming solution using Azure Event Hubs, Databricks (with Spark Structured Streaming), Delta Lake, and Power BI for visualization. The project follows the Medallion architecture to process data through Bronze, Silver, and Gold layers.</p>
 
-    <!-- Repeat the content as previously provided -->
-    <!-- This section can include headings, images, tables, and other content as required -->
-    
+    <h4>Architecture Stages</h4>
+    <ul>
+      <li><strong>Ingest:</strong> Streaming data from various sources such as Kafka, IoT devices, and log data is ingested into Azure Event Hubs.</li>
+      <li><strong>Process:</strong> The data is processed using Databricks with Spark Structured Streaming. The data is stored in Delta Lake across Bronze, Silver, and Gold layers.</li>
+      <li><strong>Serve:</strong> The processed data in the Gold layer is made available for reporting in Power BI.</li>
+    </ul>
+
+    <h4>Medallion Architecture</h4>
+    <ul>
+      <li><strong>Bronze Layer:</strong> Stores raw, unprocessed data. Minimal transformations are applied to preserve the original data.</li>
+      <li><strong>Silver Layer:</strong> Data is cleaned, filtered, and enriched. The data is in a more consumable format, ready for business use.</li>
+      <li><strong>Gold Layer:</strong> Aggregated and refined data is stored. This layer is used for reporting and business intelligence in Power BI.</li>
+    </ul>
+
+    <h4>Azure Event Hubs</h4>
+    <h5>Overview</h5>
+    <p>Azure Event Hubs is a big data streaming platform and event ingestion service capable of receiving and processing millions of events per second. Event Hubs can process and store events, data, or telemetry produced by distributed software and devices. It can capture streaming data into an Azure Blob storage or Azure Data Lake for long-term retention or micro-batch processing.</p>
+
+    <h5>Features</h5>
+    <ul>
+      <li><strong>Real-time Data Ingestion:</strong> Event Hubs allows for the ingestion of data in real time with high throughput.</li>
+      <li><strong>Partitioned Consumer Model:</strong> This model enables parallel processing of data, improving scalability and performance.</li>
+      <li><strong>Event Retention:</strong> You can configure the retention period for events to ensure that the data is available for the required duration.</li>
+      <li><strong>Capture:</strong> Automatically capture streaming data into Azure Blob storage or Azure Data Lake Store.</li>
+    </ul>
+
+    <h4>Test Data Generation</h4>
+    <p>In this project, we're generating fake weather data in JSON format. The data includes attributes such as temperature, humidity, wind speed, wind direction, and precipitation. Below is an example of the JSON format used:</p>
+    <pre>
+{
+  "temperature": 20,
+  "humidity": 60,
+  "windSpeed": 10,
+  "windDirection": "NW",
+  "precipitation": 0,
+  "conditions": "Partly Cloudy"
+}
+    </pre>
+
+    <h4>Tools Used</h4>
+    <ul>
+      <li>Azure Event Hubs: For ingesting streaming data.</li>
+      <li>Databricks: For processing the data using Spark Structured Streaming.</li>
+      <li>Delta Lake: For storing data in a structured format across Bronze, Silver, and Gold layers.</li>
+      <li>Azure Data Lake Storage (ADLS): For long-term storage of data.</li>
+      <li>Unity Catalog: For managing metadata and ensuring data governance.</li>
+      <li>Power BI: For creating reports and visualizing the processed data.</li>
+    </ul>
+
+    <h4>Project Plan</h4>
+    <ul>
+      <li><strong>Data Ingestion:</strong> Set up Azure Event Hubs to receive streaming data. Create a Databricks workspace and connect it to Azure Event Hubs.</li>
+      <li><strong>Data Processing:</strong> Implement Spark Structured Streaming in Databricks to process the data. Store the raw data in the Bronze layer. Apply transformations to create Silver data. Aggregate and refine the data to store it in the Gold layer.</li>
+      <li><strong>Data Serving:</strong> Connect Power BI to the Gold layer in Delta Lake. Create a Power BI report to visualize the weather data.</li>
+      <li><strong>Testing:</strong> Validate the data processing pipeline by generating test data. Ensure the data flows correctly from Azure Event Hubs through to Power BI.</li>
+      <li><strong>Deployment:</strong> Deploy the solution in a production environment. Monitor the data pipeline and adjust as needed for performance and scalability.</li>
+    </ul>
+
+    <h4>Notes on Real-Time Data Processing with Azure Databricks and Event Hubs</h4>
+    <h5>Output Modes in Spark Structured Streaming</h5>
+    <table>
+      <thead>
+        <tr>
+          <th>Output Mode</th>
+          <th>Behaviour</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Complete</td>
+          <td>The entire updated result table is written to external storage.</td>
+        </tr>
+        <tr>
+          <td>Append</td>
+          <td>Only new rows appended in the result table since the last trigger are written to external storage.</td>
+        </tr>
+        <tr>
+          <td>Update</td>
+          <td>Only the rows that were updated in the result table since the last trigger are written to external storage. If the query doesn't contain aggregations, it is equivalent to Append mode.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h5>Checkpointing in Spark Structured Streaming</h5>
+    <p>Checkpointing is used to prevent duplicate outputs during writeStream operations, even after job restarts or failures.</p>
+
+    <h5>Windowing in Spark Structured Streaming</h5>
+    <p>Windowing Behavior: The latest window will close when an event with an event time later than 3:25 is received. This is because the upper bound of the window is 3:20. So, an event time after 3:25 is greater than the upper bound plus 5 minutes.</p>
+
+    <h4>Power BI Integration</h4>
+    <p>To connect with Power BI, you can use Partner Connect for seamless integration between Databricks and Power BI.</p>
+
     <h4>Related Repository</h4>
     <p><a href="https://github.com/MithunDataPro/Real-Time-Streaming-with-Azure-Databricks-and-Event-Hubs" target="_blank">View the full project on GitHub</a></p>
   </div>
 </body>
 </html>
+
