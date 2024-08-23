@@ -196,7 +196,7 @@
     <div class="row">
       <!-- Project 1 -->
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card">
+        <div class="card h-100">
           <a href="project1.html">
             <img src="assets/Real-Time-Streaming-with-Azure-Databricks-and-Event-Hubs.png" class="card-img-top" alt="Real-Time Streaming with Azure Databricks and Event Hubs" style="height: 200px; object-fit: cover;">
           </a>
@@ -206,109 +206,11 @@
           </div>
         </div>
       </div>
-      <!-- Other Projects -->
       <!-- Repeat similar structure for other projects -->
     </div>
   </div>
 </section>
 
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Real-Time Streaming Project Overview</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-</head>
-<body>
-  <div class="container">
-    <h2>Real-Time Streaming with Azure Databricks and Event Hubs</h2>
-    <img src="assets/Real-Time-Streaming-with-Azure-Databricks-and-Event-Hubs-Architecture.png" alt="Project Architecture" style="width: 100%; max-width: 800px; height: auto;">
-
-    <h3>Project Overview</h3>
-    <p>This project demonstrates an end-to-end real-time data streaming solution using Azure Event Hubs, Databricks (with Spark Structured Streaming), Delta Lake, and Power BI for visualization. The project follows the Medallion architecture to process data through Bronze, Silver, and Gold layers.</p>
-
-    <h4>Architecture Stages</h4>
-    <p><strong>Ingest:</strong> Streaming data from various sources such as Kafka, IoT devices, and log data is ingested into Azure Event Hubs.</p>
-    <p><strong>Process:</strong> The data is processed using Databricks with Spark Structured Streaming. The data is stored in Delta Lake across Bronze, Silver, and Gold layers.</p>
-    <p><strong>Serve:</strong> The processed data in the Gold layer is made available for reporting in Power BI.</p>
-
-    <h4>Medallion Architecture</h4>
-    <p><strong>Bronze Layer:</strong> Stores raw, unprocessed data. Minimal transformations are applied to preserve the original data.</p>
-    <p><strong>Silver Layer:</strong> Data is cleaned, filtered, and enriched. The data is in a more consumable format, ready for business use.</p>
-    <p><strong>Gold Layer:</strong> Aggregated and refined data is stored. This layer is used for reporting and business intelligence in Power BI.</p>
-
-    <h4>Tools Used</h4>
-    <ul>
-      <li>Azure Event Hubs: For ingesting streaming data.</li>
-      <li>Databricks: For processing the data using Spark Structured Streaming.</li>
-      <li>Delta Lake: For storing data in a structured format across Bronze, Silver, and Gold layers.</li>
-      <li>Azure Data Lake Storage (ADLS): For long-term storage of data.</li>
-      <li>Unity Catalog: For managing metadata and ensuring data governance.</li>
-      <li>Power BI: For creating reports and visualizing the processed data.</li>
-    </ul>
-
-    <h4>Test Data Generation</h4>
-    <p>In this project, we're generating fake weather data in JSON format. The data includes attributes such as temperature, humidity, wind speed, wind direction, and precipitation. Below is an example of the JSON format used:</p>
-    <pre>
-{
-  "temperature": 20,
-  "humidity": 60,
-  "windSpeed": 10,
-  "windDirection": "NW",
-  "precipitation": 0,
-  "conditions": "Partly Cloudy"
-}
-    </pre>
-
-    <h4>Project Plan</h4>
-    <ul>
-      <li><strong>Data Ingestion:</strong> Set up Azure Event Hubs to receive streaming data. Create a Databricks workspace and connect it to Azure Event Hubs.</li>
-      <li><strong>Data Processing:</strong> Implement Spark Structured Streaming in Databricks to process the data. Store the raw data in the Bronze layer. Apply transformations to create Silver data. Aggregate and refine the data to store it in the Gold layer.</li>
-      <li><strong>Data Serving:</strong> Connect Power BI to the Gold layer in Delta Lake. Create a Power BI report to visualize the weather data.</li>
-      <li><strong>Testing:</strong> Validate the data processing pipeline by generating test data. Ensure the data flows correctly from Azure Event Hubs through to Power BI.</li>
-      <li><strong>Deployment:</strong> Deploy the solution in a production environment. Monitor the data pipeline and adjust as needed for performance and scalability.</li>
-    </ul>
-
-    <h4>Additional Notes</h4>
-    <h5>Output Modes in Spark Structured Streaming</h5>
-    <table>
-      <thead>
-        <tr>
-          <th>Output Mode</th>
-          <th>Behavior</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Complete</td>
-          <td>The entire updated result table is written to external storage.</td>
-        </tr>
-        <tr>
-          <td>Append</td>
-          <td>Only new rows appended in the result table since the last trigger are written to external storage.</td>
-        </tr>
-        <tr>
-          <td>Update</td>
-          <td>Only the rows that were updated in the result table since the last trigger are written to external storage. If the query doesn't contain aggregations, it is equivalent to Append mode.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h5>Checkpointing in Spark Structured Streaming</h5>
-    <p>Checkpointing is used to prevent duplicate outputs during writeStream operations, even after job restarts or failures.</p>
-
-    <h5>Windowing in Spark Structured Streaming</h5>
-    <p>Windowing Behavior: The latest window will close when an event with an event time later than 3:25 is received. This is because the upper bound of the window is 3:20. So, an event time after 3:25 is greater than the upper bound plus 5 minutes.</p>
-
-    <h4>Power BI Integration</h4>
-    <p>To connect with Power BI, you can use Partner Connect for seamless integration between Databricks and Power BI.</p>
-
-    <h4>Related Repository</h4>
-    <p><a href="https://github.com/MithunDataPro/Real-Time-Streaming-with-Azure-Databricks-and-Event-Hubs" target="_blank">View the full project on GitHub</a></p>
-  </div>
-</body>
-</html>
 
       <!-- Project 2 -->
       <div class="col-md-4 mb-4">
