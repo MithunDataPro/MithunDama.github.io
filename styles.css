@@ -1,84 +1,47 @@
 /* General Styling */
-body {
+body.dark-theme {
   font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5; /* Light gray background for contrast */
-  color: #333; /* Dark text for readability */
+  background-color: #2c2f33; /* Dark background */
+  color: #eaeaea; /* Light text color */
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #333;
+  color: #00d1b2; /* Light teal color for headings */
   text-align: center;
   margin-bottom: 20px;
 }
 
 a {
-  color: #007bff; /* Blue for links to stand out */
+  color: #00d1b2; /* Light teal color for links */
   text-decoration: none;
 }
 
 a:hover {
-  color: #0056b3; /* Darker blue on hover */
+  color: #0099a8; /* Slightly darker teal on hover */
   text-decoration: underline;
 }
 
-/* Project and Certifications Sections */
-.projects-section, .certifications-section {
-  background-color: #fff; /* White background */
-  padding: 50px 0;
+/* Project Image */
+.project-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-/* Card Styling */
-.card {
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  background-color: #fff;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.card-img-top {
-  border-bottom: 2px solid #f0f0f0;
-  object-fit: cover;
-  height: auto;
+.project-image img {
   max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
 }
 
-.card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-top: 15px;
-}
-
-.card-body {
-  text-align: center;
+/* Project Content */
+.project-content {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-}
-
-.card-text {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* Image Responsive */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .card-img-top {
-    height: 200px; /* Adjust image height for smaller screens */
-  }
-
-  .projects-section, .certifications-section {
-    padding: 30px 0;
-  }
-}
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba
