@@ -17,7 +17,6 @@ Azure Certified Data Engineer with 4+ years of experience in designing and devel
 - **Cloud Services:** Azure (Databricks, Data Factory, Synapse Analytics, Blob Storage, Event Hubs, Cosmos DB, Azure SQL Database, Azure HDInsight), AWS (S3 Bucket, AWS Glue, Lambda, EMR), Google (Google Big Query)
 - **Software Development Life Cycle:** SDLC, Waterfall, Agile models (Scrum & Jira, Azure DevOps)
 - **Version Control:** Git, GitHub, Azure DevOps
-- **Operating Systems:** Linux, Windows XP/7/8/10, Mac
 - **Big Data Technologies:** HDFS, Hive, MapReduce, Hadoop distribution, Spark, Spark Streaming, YARN, ETL
 
 ---
