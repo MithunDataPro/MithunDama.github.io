@@ -10,8 +10,10 @@
 <body class="dark-theme"> <!-- Use the same body class for consistent theming -->
   <div class="container">
     <h1 class="project-title">End-to-End Azure Data Engineering Project</h1>
-    <div class="assets/Data_Engineering_End_to_End_Project_Architecture _Project 1.png">
-      <img src="https://github.com/MithunDataPro/End-to-End-Azure-Data-Engineering-Project/blob/main/Data%20Engineering%20End%20to%20End%20Project%20Architecture.png" alt="Project Architecture">
+    
+    <!-- Corrected Image Section -->
+    <div class="image-container">
+      <img src="assets/Data_Engineering_End_to_End_Project_Architecture _Project 1.png" alt="Project Architecture" style="width: 100%; max-width: 800px; display: block; margin: 20px auto;">
     </div>
 
     <section class="project-content">
@@ -28,20 +30,7 @@
         <li>Azure Active Directory (AAD)</li>
         <li>Microsoft Power BI</li>
       </ul>
-
-      <h3>Use Case</h3>
-      <p>The use case for this project involves building an end-to-end solution by ingesting tables from an on-premise SQL Server database using Azure Data Factory and storing the data in Azure Data Lake. Azure Databricks is used to transform the raw data into its cleanest form. We then use Azure Synapse Analytics to load the clean data and finally use Microsoft Power BI to integrate with Azure Synapse Analytics to build an interactive dashboard. Azure Active Directory (AAD) and Azure Key Vault are used for monitoring and governance purposes.</p>
-
-      <h3>Agenda</h3>
-      <ul>
-        <li><strong>Part 1:</strong> Environment setup</li>
-        <li><strong>Part 2:</strong> Data Ingestion</li>
-        <li><strong>Part 3:</strong> Data Transformation</li>
-        <li><strong>Part 4:</strong> Data Loading</li>
-        <li><strong>Part 5:</strong> Data Reporting</li>
-        <li><strong>Part 6:</strong> End-to-End Pipeline Testing</li>
-      </ul>
-
+      
       <h3>Part 1: Environment Setup</h3>
       <p>Created Azure Data Factory & Downloaded AdventureWorks DB. Follow the link below to import the database used in this project to SSMS (I used the lightweight version):</p>
       <p><a href="https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms" target="_blank">AdventureWorks Installation and Configuration</a></p>
