@@ -12,16 +12,28 @@
     text-align: center;
     padding: 50px 0;
   }
+
   .about-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
   }
-  .about-section img {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px;
-    border-radius: 50%; /* Makes the image round */
-    margin-bottom: 20px;
+
+  .about-section .video-upload {
+    position: relative;
+    width: 200px; /* Set the width of the video frame */
+    height: 200px; /* Set the height of the video frame */
+    margin: 0 auto 20px;
+    overflow: hidden; /* Ensures the video is contained within the circular frame */
+    border-radius: 50%; /* Creates the circular frame */
+    border: 5px solid #ddd; /* Optional: Adds a border around the video frame */
   }
+
+  .about-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire frame without distortion */
+  }
+
   .about-section p {
     color: #333;
   }
@@ -31,79 +43,59 @@
     margin-bottom: 40px;
     font-size: 2.5rem;
   }
+
   .card {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
+
   .card-img-top {
     max-height: 180px;
     object-fit: cover;
   }
+
   .card-body {
     padding: 15px;
   }
+
   .card-title {
     font-size: 1.25rem;
   }
+
   .card-text {
     margin-bottom: 15px;
-  }
-
-  /* Skills Section */
-  .skills-section h2 {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-  }
-  .skills-section .card {
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  .skills-section .card-img-top {
-    padding: 20px;
-    background-color: #f8f9fa;
-    height: 180px;
-    object-fit: contain;
-  }
-  .skills-section .card-body {
-    padding: 15px;
-  }
-  .skills-section .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-  }
-  .skills-section .btn-outline-primary {
-    color: #007bff;
-    border-color: #007bff;
-  }
-  .skills-section .btn-outline-primary:hover {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
   }
 
   /* Contact Section */
   .contact-section {
     padding: 50px 0;
   }
+
   .contact-section h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
   }
+
   .contact-section p {
     font-size: 1.2rem;
     margin-bottom: 20px;
   }
+
   .social-icon {
     width: 50px;
     margin-bottom: 10px;
   }
+
   .social-icon:hover {
     opacity: 0.7;
   }
+
   .contact-section a {
     color: #fff;
     text-decoration: none;
     display: inline-block;
     margin-bottom: 10px;
   }
+
   .contact-section a:hover {
     color: #ddd;
   }
@@ -112,38 +104,39 @@
   .navbar {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
+
   body {
     padding-top: 56px;
   }
+
   html {
     scroll-behavior: smooth;
   }
+
   .navbar-nav .nav-link {
     color: white;
   }
+
   .navbar-nav .nav-link:hover {
     color: #f8f9fa;
   }
+
   @media (max-width: 992px) {
     .navbar-collapse {
       background-color: #343a40;
     }
   }
-
-  .logo-img {
-    width: 50px; /* Adjust the size as needed */
-    height: 50px;
-    margin-right: 10px;
-  }
-
-  .experience-section .logo-img,
-  .education-section .logo-img,
-  .skills-section .logo-img {
-    width: 75px;
-    height: auto;
-    margin-bottom: 15px;
-  }
 </style>
+
+<script>
+  function loadVideo(event) {
+    var file = event.target.files[0];
+    var video = document.getElementById('profileVideo');
+    video.src = URL.createObjectURL(file);
+    video.load();
+    video.play();
+  }
+</script>
 
 </head>
 <body>
@@ -183,15 +176,14 @@
   </div>
 </nav>
 
-
 <!-- About Section -->
 <section id="about" class="about-section">
   <div class="container">
     <h2>About</h2>
     <!-- Video Upload and Playback -->
     <div class="video-upload">
-      <video id="profileVideo" width="200" height="200" controls>
-        <!-- Provide a default video file or let users upload their own -->
+      <video id="profileVideo" controls>
+        <!-- Default video or uploaded video will be displayed here -->
         <source src="assets/default-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -217,7 +209,6 @@
           </div>
         </div>
       </div>
-
       
       <!-- Project 2 -->
       <div class="col-lg-6 col-md-12 mb-4">
@@ -233,6 +224,13 @@
     </div>
   </div>
 </section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
 
 
   <!-- Certifications Section -->
