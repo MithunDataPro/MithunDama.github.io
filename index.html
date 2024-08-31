@@ -201,14 +201,22 @@
   </div>
 </section>
 
-<script>
-  function loadVideo(event) {
-    const file = event.target.files[0];
-    const video = document.getElementById('profileVideo');
-    const fileURL = URL.createObjectURL(file);
-    video.src = fileURL;
-  }
-</script>
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-white">
+  <div class="container">
+    <h2 class="text-center">Projects</h2>
+    <div class="row justify-content-center">
+      <!-- Project 1 -->
+      <div class="col-lg-6 col-md-12 mb-4">
+        <div class="card h-100">
+          <a href="project1.html">
+            <img src="assets/Project_Real_Time_Streaming.png" class="card-img-top" alt="Real-Time Streaming with Azure Databricks and Event Hubs" style="height: 500px; object-fit: contain; width: 100%;">
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title">Real-Time Streaming with Azure Databricks and Event Hubs</h5>
+          </div>
+        </div>
+      </div>
 
       
       <!-- Project 2 -->
