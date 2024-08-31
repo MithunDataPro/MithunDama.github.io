@@ -188,27 +188,28 @@
 <section id="about" class="about-section">
   <div class="container">
     <h2>About</h2>
-    <img src="assets/IMG_9156.jpg" alt="Mithun Dama">
-    <p>I am a data professional with experience as an Educational Analyst at Toppr and a Data Engineer at Yocket. I founded my startup, Damasmart, during my undergraduate studies, driving innovative tech solutions. Having completed my master's in data science at Pace University, where I interned as a Big Data Engineer, I am now seeking roles in Big Data, Data Engineering, and Data Analysis. My journey combines technical expertise with business acumen, equipping me to implement advanced analytical strategies for efficient data management and reporting.</p>
+    <!-- Video Upload and Playback -->
+    <div class="video-upload">
+      <video id="profileVideo" width="200" height="200" controls>
+        <!-- Provide a default video file or let users upload their own -->
+        <source src="assets/default-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <input type="file" id="uploadVideo" accept="video/*" onchange="loadVideo(event)" />
+    </div>
+    <p>Azure Certified Data Engineer with 4+ years of experience in designing and developing large-scale data platforms, specializing in both batch and streaming data processing. Proficient in leveraging Azure cloud services to optimize data workflows, enhance ETL/ELT processes, and deliver robust data visualization solutions. Skilled in handling complex data transformation tasks and driving data strategy initiatives within the financial services industry. Eager to contribute my expertise to a dynamic data strategy team.</p>
   </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="projects-section bg-white">
-  <div class="container">
-    <h2 class="text-center">Projects</h2>
-    <div class="row justify-content-center">
-      <!-- Project 1 -->
-      <div class="col-lg-6 col-md-12 mb-4">
-        <div class="card h-100">
-          <a href="project1.html">
-            <img src="assets/Project_Real_Time_Streaming.png" class="card-img-top" alt="Real Time Streaming with Azure Databricks and Event Hubs" style="height: 900px; object-fit: contain; width: 100%;">
-          </a>
-          <div class="card-body text-center">
-            <h5 class="card-title">Real Time Streaming with Azure Databricks and Event Hubs</h5>
-          </div>
-        </div>
-      </div>
+<script>
+  function loadVideo(event) {
+    const file = event.target.files[0];
+    const video = document.getElementById('profileVideo');
+    const fileURL = URL.createObjectURL(file);
+    video.src = fileURL;
+  }
+</script>
+
       
       <!-- Project 2 -->
       <div class="col-lg-6 col-md-12 mb-4">
